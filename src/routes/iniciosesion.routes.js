@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { getIniciarSesion } from "../controllers/iniciosesion.controller.js";
+import { postIniciarSesion } from "../controllers/iniciosesion.controller.js";
 
 const router = Router();
 
-router.get("/login", getIniciarSesion);
+router.post("/login", postIniciarSesion);
 
 
 //router.post("/employees", (req, res) => res.send("Creando empleados"));
