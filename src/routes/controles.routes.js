@@ -4,11 +4,11 @@ import { getTareas, getExamanes, getEventos, getReuniones, getRecursos } from ".
 
 const router = Router()
 
-router.get('/tareas', getTareas);
-router.get('/eventos', getEventos);
-router.get('/examenes', getExamanes);
-router.get('/reuniones', getReuniones);
-router.get('/recursos', getRecursos);
+router.post('/tareas', getTareas);
+router.post('/eventos', getEventos);
+router.post('/examenes', getExamanes);
+router.post('/reuniones', getReuniones);
+router.post('/recursos', getRecursos);
 
 
 export default router
