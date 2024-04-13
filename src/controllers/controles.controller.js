@@ -10,7 +10,7 @@ export const getTareas = async (req, res) => {
 }
 
 export const getExamanes = async (req, res) => {
-    const {idusuario} = req.body
+    const {idusuario} = req.query
     const [rows] = await pool.query("CALL ObtenerInformacionControlesPorCategoria(?, 2);",[idusuario]) 
     res.json(rows[0]);
 }
