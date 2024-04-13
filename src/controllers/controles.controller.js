@@ -16,19 +16,19 @@ export const getExamanes = async (req, res) => {
 }
 
 export const getEventos = async (req, res) => {
-    const {idusuario} = req.body
+    const {idusuario} = req.query
     const [rows] = await pool.query("CALL ObtenerInformacionControlesPorCategoria(?, 3);",[idusuario]) 
     res.json(rows[0]);
 }
 
 export const getReuniones = async (req, res) => {
-    const {idusuario} = req.body
+    const {idusuario} = req.query
     const [rows] = await pool.query("CALL ObtenerInformacionControlesPorCategoria(?, 4);",[idusuario]) 
     res.json(rows[0]);
 }
 
 export const getRecursos = async (req, res) => {
-    const {idusuario} = req.body
+    const {idusuario} = req.query
     const [rows] = await pool.query("CALL ObtenerInformacionControlesPorCategoria(?, 5);",[idusuario]) 
     res.json(rows[0]);
 }
